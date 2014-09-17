@@ -4,8 +4,7 @@ samples/sample2.lo: samples/sample2.cc samples/sample2.h \
   /usr/include/sys/_posix_availability.h /usr/include/machine/_types.h \
   /usr/include/i386/_types.h /usr/include/Availability.h \
   /usr/include/AvailabilityInternal.h /usr/include/sys/_types/_size_t.h \
-  /usr/include/sys/_types/_null.h /usr/include/sys/_types/_rsize_t.h \
-  /usr/include/sys/_types/_errno_t.h /usr/include/sys/_types/_ssize_t.h \
+  /usr/include/sys/_types/_null.h /usr/include/sys/_types/_ssize_t.h \
   /usr/include/strings.h
 
 samples/sample2.h:
@@ -33,10 +32,6 @@ samples/sample2.h:
 /usr/include/sys/_types/_size_t.h:
 
 /usr/include/sys/_types/_null.h:
-
-/usr/include/sys/_types/_rsize_t.h:
-
-/usr/include/sys/_types/_errno_t.h:
 
 /usr/include/sys/_types/_ssize_t.h:
 
