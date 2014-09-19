@@ -9,16 +9,16 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-MacOSX
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-MacOSX
-CND_ARTIFACT_NAME_Debug=libmp3_finder.a
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/libmp3_finder.a
+CND_ARTIFACT_NAME_Debug=mp3_finder
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/mp3_finder
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-MacOSX/package
 CND_PACKAGE_NAME_Debug=mp3finder.tar
 CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/mp3finder.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-MacOSX
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-MacOSX
-CND_ARTIFACT_NAME_Release=libmp3_finder.a
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/libmp3_finder.a
+CND_ARTIFACT_NAME_Release=mp3_finder
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/mp3_finder
 CND_PACKAGE_DIR_Release=dist/Release/GNU-MacOSX/package
 CND_PACKAGE_NAME_Release=mp3finder.tar
 CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/mp3finder.tar

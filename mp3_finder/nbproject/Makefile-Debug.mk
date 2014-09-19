@@ -52,22 +52,22 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-Ldeps/gtest-1.7.0\ 2/lib "deps/gtest-1.7.0 2/lib/libgtest.a"  
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmp3_finder.a
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmp3_finder.a: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder: deps/gtest-1.7.0\ 2/lib/libgtest.a
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmp3_finder.a
-	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmp3_finder.a ${OBJECTFILES} 
-	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmp3_finder.a
+	g++ -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/main.o: main.cc 
 	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -Ideps/gtest-1.7.0/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cc
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cc
 
 # Subprojects
 .build-subprojects:
@@ -75,7 +75,7 @@ ${OBJECTDIR}/main.o: main.cc
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libmp3_finder.a
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder
 
 # Subprojects
 .clean-subprojects:
