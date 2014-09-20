@@ -35,7 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/downloader_manager.o \
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/mp3skull_downloader.o
 
 
 # C Compiler Flags
@@ -64,10 +66,20 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	g++ -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/downloader_manager.o: downloader_manager.cc 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/downloader_manager.o downloader_manager.cc
+
 ${OBJECTDIR}/main.o: main.cc 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cc
+
+${OBJECTDIR}/mp3skull_downloader.o: mp3skull_downloader.cc 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mp3skull_downloader.o mp3skull_downloader.cc
 
 # Subprojects
 .build-subprojects:

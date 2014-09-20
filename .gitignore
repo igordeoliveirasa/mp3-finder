@@ -26,3 +26,5 @@
 *.exe
 *.out
 *.app
+/mp3_finder/build/
+/mp3_finder/dist/
