@@ -1,10 +1,11 @@
 #ifndef MP3SKULL_DOWNLOADER_H
 #define	MP3SKULL_DOWNLOADER_H
 
-class MP3Skull_Downloader {
+#include "idownloader.h"
+
+class MP3SkullDownloader : public IDownloader {
 public:
-    mp3skull_downloader(const mp3skull_downloader& orig);
-    virtual ~mp3skull_downloader();
+    void teste() {};
 private:
 
 };

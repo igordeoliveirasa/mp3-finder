@@ -2,6 +2,7 @@
 #include <gtest/gtest.h>
 #include <vector>
 #include "downloader_manager.h"
+#include "mp3skull_downloader.h"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
@@ -15,7 +16,7 @@ int Factorial(int n) {
 // Tests factorial of 0.
 TEST(MainFlow, DownloadSuccess) {
     DownloaderManager downloader_manager;
-    downloader_manager.add_downloader(  );
-    downloader_manager.add_downloader("Avicii - Wake Me Up (Radio Edit)﻿");
+    downloader_manager.add_downloader( new MP3SkullDownloader() );
+    downloader_manager.download("Avicii - Wake Me Up (Radio Edit)﻿", "/tmp");
   EXPECT_EQ(5, Factorial(2));
 }
