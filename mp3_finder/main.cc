@@ -18,5 +18,5 @@ TEST(MainFlow, DownloadSuccess) {
     DownloaderManager downloader_manager;
     downloader_manager.add_downloader( new MP3SkullDownloader() );
     downloader_manager.download("Avicii - Wake Me Up (Radio Edit)﻿", "/tmp");
-  EXPECT_EQ(5, Factorial(2));
+  EXPECT_EQ(4, Factorial(2));
 }
