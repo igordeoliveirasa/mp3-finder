@@ -5,9 +5,9 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>common.h</itemPath>
-      <itemPath>downloader_manager.h</itemPath>
-      <itemPath>idownloader.h</itemPath>
-      <itemPath>mp3skull_downloader.h</itemPath>
+      <itemPath>irepository.h</itemPath>
+      <itemPath>mp3skull_repository.h</itemPath>
+      <itemPath>repository_manager.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -16,9 +16,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>downloader_manager.cc</itemPath>
       <itemPath>main.cc</itemPath>
-      <itemPath>mp3skull_downloader.cc</itemPath>
+      <itemPath>mp3skull_repository.cc</itemPath>
+      <itemPath>repository_manager.cc</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -59,17 +59,17 @@
       </compileType>
       <item path="common.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="downloader_manager.cc" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="downloader_manager.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="idownloader.h" ex="false" tool="3" flavor2="0">
+      <item path="irepository.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cc" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="mp3skull_downloader.cc" ex="false" tool="1" flavor2="0">
+      <item path="mp3skull_repository.cc" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="mp3skull_downloader.h" ex="false" tool="3" flavor2="0">
+      <item path="mp3skull_repository.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="repository_manager.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="repository_manager.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -94,17 +94,17 @@
       </compileType>
       <item path="common.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="downloader_manager.cc" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="downloader_manager.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="idownloader.h" ex="false" tool="3" flavor2="0">
+      <item path="irepository.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cc" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="mp3skull_downloader.cc" ex="false" tool="1" flavor2="0">
+      <item path="mp3skull_repository.cc" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="mp3skull_downloader.h" ex="false" tool="3" flavor2="0">
+      <item path="mp3skull_repository.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="repository_manager.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="repository_manager.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

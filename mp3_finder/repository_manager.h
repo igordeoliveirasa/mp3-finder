@@ -2,12 +2,12 @@
 #define	DOWNLOADER_MANAGER_H
 
 #include <vector>
-#include "idownloader.h"
+#include "irepository.h"
 #include <string>
 
-class DownloaderManager {
+class RepositoryManager {
 public:
-    void add_downloader(IDownloader * downloader);
+    void add_downloader(IRepository * repository);
     bool download(std::string name, std::string dest_dir);
 };
 
