@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/http_connection.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/mp3skull_repository.o \
 	${OBJECTDIR}/repository_manager.o
@@ -54,7 +55,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-Ldeps/gtest-1.7.0\ 2/lib "deps/gtest-1.7.0 2/lib/libgtest.a"  
+LDLIBSOPTIONS=-Ldeps/gtest-1.7.0\ 2/lib -Ldeps/boost_1_56_0/libs "deps/gtest-1.7.0 2/lib/libgtest.a" deps/boost_1_56_0/libs/libboost_regex.a deps/boost_1_56_0/libs/libboost_iostreams.a deps/boost_1_56_0/libs/libboost_system.a  
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -62,24 +63,35 @@ LDLIBSOPTIONS=-Ldeps/gtest-1.7.0\ 2/lib "deps/gtest-1.7.0 2/lib/libgtest.a"
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder: deps/gtest-1.7.0\ 2/lib/libgtest.a
 
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder: deps/boost_1_56_0/libs/libboost_regex.a
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder: deps/boost_1_56_0/libs/libboost_iostreams.a
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder: deps/boost_1_56_0/libs/libboost_system.a
+
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	g++ -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/http_connection.o: http_connection.cc 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -Ideps/boost_1_56_0 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/http_connection.o http_connection.cc
+
 ${OBJECTDIR}/main.o: main.cc 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cc
+	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -Ideps/boost_1_56_0 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cc
 
 ${OBJECTDIR}/mp3skull_repository.o: mp3skull_repository.cc 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mp3skull_repository.o mp3skull_repository.cc
+	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -Ideps/boost_1_56_0 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mp3skull_repository.o mp3skull_repository.cc
 
 ${OBJECTDIR}/repository_manager.o: repository_manager.cc 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/repository_manager.o repository_manager.cc
+	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -Ideps/boost_1_56_0 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/repository_manager.o repository_manager.cc
 
 # Subprojects
 .build-subprojects:

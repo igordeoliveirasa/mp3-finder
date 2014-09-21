@@ -5,6 +5,8 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>common.h</itemPath>
+      <itemPath>http_connection.h</itemPath>
+      <itemPath>ihttp_connection.h</itemPath>
       <itemPath>irepository.h</itemPath>
       <itemPath>mp3skull_repository.h</itemPath>
       <itemPath>repository_manager.h</itemPath>
@@ -16,6 +18,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>http_connection.cc</itemPath>
       <itemPath>main.cc</itemPath>
       <itemPath>mp3skull_repository.cc</itemPath>
       <itemPath>repository_manager.cc</itemPath>
@@ -45,19 +48,30 @@
           <commandlineTool>g++</commandlineTool>
           <incDir>
             <pElem>deps/gtest-1.7.0 2/include</pElem>
+            <pElem>deps/boost_1_56_0</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
           <linkerAddLib>
             <pElem>deps/gtest-1.7.0 2/lib</pElem>
+            <pElem>deps/boost_1_56_0/libs</pElem>
           </linkerAddLib>
           <commandlineTool>g++</commandlineTool>
           <linkerLibItems>
             <linkerLibFileItem>deps/gtest-1.7.0 2/lib/libgtest.a</linkerLibFileItem>
+            <linkerLibFileItem>deps/boost_1_56_0/libs/libboost_regex.a</linkerLibFileItem>
+            <linkerLibFileItem>deps/boost_1_56_0/libs/libboost_iostreams.a</linkerLibFileItem>
+            <linkerLibFileItem>deps/boost_1_56_0/libs/libboost_system.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
       <item path="common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="http_connection.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="http_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ihttp_connection.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="irepository.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -93,6 +107,12 @@
         </asmTool>
       </compileType>
       <item path="common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="http_connection.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="http_connection.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ihttp_connection.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="irepository.h" ex="false" tool="3" flavor2="0">
       </item>

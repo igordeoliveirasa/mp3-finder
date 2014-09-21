@@ -1,9 +1,9 @@
 #include "repository_manager.h"
 
-void RepositoryManager::add_downloader(IRepository * downloader) {
+void RepositoryManager::add_repository(IRepository * repository) {
 }
 
-bool RepositoryManager::download(std::string name, std::string dest_dir) {
+bool RepositoryManager::download(std::string name, std::string destiny_path) {
     return true;
 }
 

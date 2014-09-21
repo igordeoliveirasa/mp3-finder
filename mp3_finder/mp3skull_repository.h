@@ -2,14 +2,19 @@
 #define	MP3SKULL_DOWNLOADER_H
 
 #include "irepository.h"
+#include "ihttp_connection.h"
+
 
 class MP3SkullRepository : public IRepository {
 
     public:
-      bool download(std::string url);
-      std::string search(std::string name);
+        MP3SkullRepository(const boost::shared_ptr<IHttpConnection> & http_connection) : http_connection_(http_connection) {}
+        
+        bool download(std::string url, std::string destiny_path);
+        std::string search(std::string name);
 
     private:
+        const boost::shared_ptr<IHttpConnection> & http_connection_;
 
 };
 

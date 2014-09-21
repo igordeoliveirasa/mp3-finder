@@ -7,7 +7,7 @@
 
 class RepositoryManager {
 public:
-    void add_downloader(IRepository * repository);
+    void add_repository(IRepository * repository);
     bool download(std::string name, std::string dest_dir);
 };
 

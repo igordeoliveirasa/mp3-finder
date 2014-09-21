@@ -1,12 +1,12 @@
 #ifndef IDOWNLOADER_H
 #define	IDOWNLOADER_H
 
-#include <vector>
+#include "common.h"
 
 class IRepository
 {
    public:
-      virtual bool download(std::string url) = 0;
+      virtual bool download(std::string url, std::string destiny_path) = 0;
       virtual std::string search(std::string name) = 0;
 };
 
