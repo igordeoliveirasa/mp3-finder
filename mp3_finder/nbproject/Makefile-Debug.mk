@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/http_connection.o \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/mp3_url_parser.o \
 	${OBJECTDIR}/mp3skull_repository.o \
 	${OBJECTDIR}/repository_manager.o
 
@@ -82,6 +83,11 @@ ${OBJECTDIR}/main.o: main.cc
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -Ideps/boost_1_56_0 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cc
+
+${OBJECTDIR}/mp3_url_parser.o: mp3_url_parser.cc 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -Ideps/boost_1_56_0 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mp3_url_parser.o mp3_url_parser.cc
 
 ${OBJECTDIR}/mp3skull_repository.o: mp3skull_repository.cc 
 	${MKDIR} -p ${OBJECTDIR}

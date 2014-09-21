@@ -7,7 +7,9 @@
       <itemPath>common.h</itemPath>
       <itemPath>http_connection.h</itemPath>
       <itemPath>ihttp_connection.h</itemPath>
+      <itemPath>iparser.h</itemPath>
       <itemPath>irepository.h</itemPath>
+      <itemPath>mp3_url_parser.h</itemPath>
       <itemPath>mp3skull_repository.h</itemPath>
       <itemPath>repository_manager.h</itemPath>
     </logicalFolder>
@@ -20,6 +22,7 @@
                    projectFiles="true">
       <itemPath>http_connection.cc</itemPath>
       <itemPath>main.cc</itemPath>
+      <itemPath>mp3_url_parser.cc</itemPath>
       <itemPath>mp3skull_repository.cc</itemPath>
       <itemPath>repository_manager.cc</itemPath>
     </logicalFolder>
@@ -73,9 +76,15 @@
       </item>
       <item path="ihttp_connection.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="iparser.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="irepository.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mp3_url_parser.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mp3_url_parser.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="mp3skull_repository.cc" ex="false" tool="1" flavor2="0">
       </item>
@@ -114,9 +123,15 @@
       </item>
       <item path="ihttp_connection.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="iparser.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="irepository.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mp3_url_parser.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="mp3_url_parser.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="mp3skull_repository.cc" ex="false" tool="1" flavor2="0">
       </item>
