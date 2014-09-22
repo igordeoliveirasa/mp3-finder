@@ -13,7 +13,7 @@
 
 class HttpConnection : public IHttpConnection {
 public:
-    std::string read(std::string url);
+    std::string read(std::string domain, std::string page);
 };
 
 

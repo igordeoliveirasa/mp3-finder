@@ -12,7 +12,7 @@
 
 class IHttpConnection {
 public:
-    virtual std::string read(std::string url) = 0;
+    virtual std::string read(std::string domain, std::string page) = 0;
 };
 
 #endif	/* HTTP_CONNECTION_H */

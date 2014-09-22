@@ -11,7 +11,7 @@
 #include "iparser.h"
 
 
-class MP3URLParser : public IParser {
+class DefaultParser : public IParser {
 public:
     std::vector<std::string> parse_lines(std::string text, std::string expression);
 private:

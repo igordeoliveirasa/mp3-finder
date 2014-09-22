@@ -5,11 +5,11 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>common.h</itemPath>
+      <itemPath>default_parser.h</itemPath>
       <itemPath>http_connection.h</itemPath>
       <itemPath>ihttp_connection.h</itemPath>
       <itemPath>iparser.h</itemPath>
       <itemPath>irepository.h</itemPath>
-      <itemPath>mp3_url_parser.h</itemPath>
       <itemPath>mp3skull_repository.h</itemPath>
       <itemPath>repository_manager.h</itemPath>
     </logicalFolder>
@@ -20,9 +20,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>default_parser.cc</itemPath>
       <itemPath>http_connection.cc</itemPath>
       <itemPath>main.cc</itemPath>
-      <itemPath>mp3_url_parser.cc</itemPath>
       <itemPath>mp3skull_repository.cc</itemPath>
       <itemPath>repository_manager.cc</itemPath>
     </logicalFolder>
@@ -70,6 +70,10 @@
       </compileType>
       <item path="common.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="default_parser.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="default_parser.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="http_connection.cc" ex="false" tool="1" flavor2="0">
       </item>
       <item path="http_connection.h" ex="false" tool="3" flavor2="0">
@@ -81,10 +85,6 @@
       <item path="irepository.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cc" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="mp3_url_parser.cc" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="mp3_url_parser.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="mp3skull_repository.cc" ex="false" tool="1" flavor2="0">
       </item>
@@ -117,6 +117,10 @@
       </compileType>
       <item path="common.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="default_parser.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="default_parser.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="http_connection.cc" ex="false" tool="1" flavor2="0">
       </item>
       <item path="http_connection.h" ex="false" tool="3" flavor2="0">
@@ -128,10 +132,6 @@
       <item path="irepository.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cc" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="mp3_url_parser.cc" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="mp3_url_parser.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="mp3skull_repository.cc" ex="false" tool="1" flavor2="0">
       </item>

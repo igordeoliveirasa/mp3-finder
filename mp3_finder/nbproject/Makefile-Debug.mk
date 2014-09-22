@@ -35,9 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/default_parser.o \
 	${OBJECTDIR}/http_connection.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/mp3_url_parser.o \
 	${OBJECTDIR}/mp3skull_repository.o \
 	${OBJECTDIR}/repository_manager.o
 
@@ -74,6 +74,11 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	g++ -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/mp3_finder ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/default_parser.o: default_parser.cc 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -Ideps/boost_1_56_0 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/default_parser.o default_parser.cc
+
 ${OBJECTDIR}/http_connection.o: http_connection.cc 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -83,11 +88,6 @@ ${OBJECTDIR}/main.o: main.cc
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -Ideps/boost_1_56_0 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cc
-
-${OBJECTDIR}/mp3_url_parser.o: mp3_url_parser.cc 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Ideps/gtest-1.7.0\ 2/include -Ideps/boost_1_56_0 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mp3_url_parser.o mp3_url_parser.cc
 
 ${OBJECTDIR}/mp3skull_repository.o: mp3skull_repository.cc 
 	${MKDIR} -p ${OBJECTDIR}
